@@ -8,11 +8,13 @@ export const Counter = () => {
   const reset = () => setCount(0);
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
+    <>
       <h1>Contador: {count}</h1>
-      <button onClick={increment}>Incrementar</button>
-      <button onClick={decrement}>Decrementar</button>
-      <button onClick={reset}>Resetear</button>
-    </div>
+      <div style={{ textAlign: 'center', padding: '20px', display: "flex", gap: "1rem" }}>
+        <button onClick={decrement}>-</button>
+        <button onClick={increment}>+</button>
+        <button onClick={reset}>Resetear</button>
+      </div>
+    </>
   );
 }
